@@ -33,4 +33,6 @@ public interface PmsBrandMapper {
     int updateByPrimaryKeyWithBLOBs(PmsBrand record);
 
     int updateByPrimaryKey(PmsBrand record);
+
+    PmsBrand selectMoreById(Long id);
 }

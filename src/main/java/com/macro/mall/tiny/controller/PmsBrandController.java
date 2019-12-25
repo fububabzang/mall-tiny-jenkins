@@ -5,6 +5,7 @@ import com.macro.mall.tiny.common.api.CommonResult;
 import com.macro.mall.tiny.mbg.model.PmsBrand;
 import com.macro.mall.tiny.service.PmsBrandService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
@@ -98,6 +99,14 @@ public class PmsBrandController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<PmsBrand> brand(@PathVariable("id") Long id) {
+        return CommonResult.success(brandService.getBrand(id));
+    }
+
+    @ApiImplicitParam(name = "id" , value = "table_id")
+    @ApiOperation("根据id查询不全的信息")
+    @GetMapping("/getMore/{id}")
+    @ResponseBody
+    public CommonResult<PmsBrand> getMore(@PathVariable("id") Long id){
         return CommonResult.success(brandService.getBrand(id));
     }
 }
