@@ -357,7 +357,7 @@
   </update>
   
   <select id="selectMoreById" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
-    SELECT id , NAME , logo , brand_story FROM pms_brand WHERE id = #{id}
+    SELECT id , NAME , logo , brand_story FROM pms_brand WHERE id = #{id,jdbcType=BIGINT}
   </select>
   
 </mapper>

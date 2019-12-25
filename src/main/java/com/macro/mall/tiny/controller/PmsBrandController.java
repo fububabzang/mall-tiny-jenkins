@@ -102,7 +102,6 @@ public class PmsBrandController {
         return CommonResult.success(brandService.getBrand(id));
     }
 
-    @ApiImplicitParam(name = "id" , value = "table_id")
     @ApiOperation("根据id查询不全的信息")
     @GetMapping("/getMore/id")
     @ResponseBody
