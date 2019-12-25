@@ -102,7 +102,7 @@ public class PmsBrandController {
         return CommonResult.success(brandService.getBrand(id));
     }
 
-    @ApiOperation("根据id查询不全的信息bilibili")
+    @ApiOperation("根据id查询不全的信息欧拉欧拉欧拉欧拉")
     @GetMapping("/getMore/id")
     @ResponseBody
     public CommonResult<PmsBrand> getMore(@RequestParam("id") Long id){
