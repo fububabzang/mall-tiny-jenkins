@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-app_name='mall-tiny-jenkins'
+app_name='mall-tiny/mall-tiny-jenkins'
 docker stop ${app_name}
 echo '----stop container----'
 docker rm ${app_name}
