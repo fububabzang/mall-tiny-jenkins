@@ -106,6 +106,7 @@ public class PmsBrandController {
     @GetMapping("/getMore/id")
     @ResponseBody
     public CommonResult<PmsBrand> getMore(@RequestParam("id") Long id){
+        LOGGER.info("查询出的结果集是: {}" , brandService.selectMoreById(id));
         return CommonResult.success(brandService.selectMoreById(id));
     }
 }
